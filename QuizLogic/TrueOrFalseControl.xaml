@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="StudyAI.QuizLogic.TrueOrFalseControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudyAI.QuizLogic"
+             Background="White"
+             HorizontalAlignment="Left"
+             mc:Ignorable="d" Height="254" Width="600">
+
+    <Border x:Name="BorderB" BorderThickness="4" Margin="10,5,10,10" Padding="5" CornerRadius="5" BorderBrush="White">
+        <Grid>
+            <!-- Define two columns of equal width -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Question text on top, spanning both columns -->
+            <TextBlock x:Name="QuestionText" FontSize="16" TextWrapping="Wrap" Padding="5" HorizontalAlignment="Center" Grid.ColumnSpan="2" Text="Is Venus a planet?"/>
+
+            <!-- Blue border in the first column -->
+            <Border Background="#58B9FF" Width="250" CornerRadius="10" Grid.Column="0" Margin="16,111,15,30">
+                <Button  Style="{StaticResource TrueOrFalseButton}" x:Name="blueBtn" Content="True" FontSize="16" Foreground="White" Background="Transparent" BorderThickness="0" Click="BlueButton_Click"/>
+            </Border>
+
+            <!-- Red border in the second column -->
+            <Border  Background="#FF5858" Height="80" Width="250" CornerRadius="10" Grid.Column="1" VerticalAlignment="Top" Margin="15,111,16,0">
+                <Button Style="{StaticResource TrueOrFalseButton}" x:Name="redBtn"  Content="False" FontSize="16" Foreground="White" Background="Transparent" BorderThickness="0" Click="RedButton_Click"/>
+            </Border>
+
+        </Grid>
+    </Border>
+
+</UserControl>

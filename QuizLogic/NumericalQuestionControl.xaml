@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="StudyAI.NumericalQuestionControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StudyAI"
+             Background="White"
+             HorizontalAlignment="Left"
+             mc:Ignorable="d" Height="220" Width="600">
+
+    <Border x:Name="BorderB" BorderThickness="4" Margin="10,5,10,5" Padding="5" CornerRadius="5" BorderBrush="White">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Question Text Block -->
+            <TextBlock x:Name="QuestionText" FontSize="16" TextWrapping="Wrap" 
+                       Text="How many legs does a spider have?" 
+                       Padding="5" Grid.Row="0" Grid.Column="0" 
+                       HorizontalAlignment="Left" Width="552"/>
+
+            <!-- Answer Box and Formatted Text Box inside a Border and Scroll Viewer -->
+            <Border BorderThickness="0" CornerRadius="8" Background="#EDEDED" Padding="5" 
+                    Grid.Column="0" Grid.Row="1" Margin="0,5,10,96" Grid.ColumnSpan="3">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel>
+                        <TextBox x:Name="AnswerBox"
+                                 TextWrapping="Wrap"
+                                 BorderThickness="0"
+                                 Background="{x:Null}"
+                                 Text="Write your answer here..."
+                                 MinHeight="25"
+                                 Padding="8"
+                                 FontSize="10"
+                                 GotFocus="WipeTextFocused"
+                                 LostFocus="AddtextUnFocused"/>
+
+                        <RichTextBox x:Name="FormattedTextBox"
+                                     IsEnabled="False"
+                                     Height="19"
+                                     Margin="0,3,0,0"
+                                     IsReadOnly="True"
+                                     Background="{x:Null}"
+                                     BorderThickness="0"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <!-- Buttons -->
+            <Button Style="{StaticResource TrueOrFalseButton}" Content="Get Answer" Width="92" FontSize="10" 
+                    BorderThickness="0" Background="LightGray" Foreground="Black" 
+                    Grid.Row="1" Margin="-34,0,205,8" Height="21" 
+                    VerticalAlignment="Bottom" Click="Get_Answer"/>
+
+            <Button Style="{StaticResource TrueOrFalseButton}" Content="Check Answer" Width="92" FontSize="10" 
+                    BorderThickness="0" Background="#3685D3" Foreground="White" 
+                    Grid.Row="1" Margin="-141,0,312,8" Height="21" 
+                    VerticalAlignment="Bottom" Click="Check_Answer"/>
+
+            <Button Style="{StaticResource TrueOrFalseButton}" x:Name="tryAgain_Btn" IsEnabled="False" 
+                    Visibility="Visible" Content="Try again" Width="92" FontSize="10" 
+                    BorderThickness="0" Background="LightGray" Foreground="Black" 
+                    Grid.Row="1" Margin="73,0,98,8" Height="21" 
+                    VerticalAlignment="Bottom" Click="Try_Again"/>
+        </Grid>
+    </Border>
+</UserControl>

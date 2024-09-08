@@ -1,0 +1,101 @@
+﻿<Application x:Class="StudyAI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:StudyAI"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- Merge the button styles dictionary -->
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/QuizLogic/CustomElements/TrueOrFalseButton.xaml"/>
+                <ResourceDictionary Source="/QuizLogic/CustomElements/ComboBoxCustom.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- Define Lexend font styles with different weights for Label, TextBox, and Button -->
+
+            <Style x:Key="LexendMedium" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Black" />
+            </Style>
+
+            <Style x:Key="LexendMediumTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Medium" />
+            </Style>
+
+            <Style x:Key="LexendMediumButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Medium" />
+            </Style>
+
+            <Style x:Key="LexendBlack" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Black" />
+            </Style>
+
+            <Style x:Key="LexendBlackTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Black" />
+            </Style>
+
+            <Style x:Key="LexendBlackButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Black" />
+            </Style>
+
+            <Style x:Key="LexendBold" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Bold" />
+            </Style>
+
+            <Style x:Key="LexendBoldTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Bold" />
+            </Style>
+
+            <Style x:Key="LexendBoldButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Bold" />
+            </Style>
+
+            <Style x:Key="LexendExtraBold" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraBold" />
+            </Style>
+
+            <Style x:Key="LexendExtraBoldTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraBold" />
+            </Style>
+
+            <Style x:Key="LexendExtraBoldButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraBold" />
+            </Style>
+
+            <Style x:Key="LexendExtraLight" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraLight" />
+            </Style>
+
+            <Style x:Key="LexendExtraLightTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraLight" />
+            </Style>
+
+            <Style x:Key="LexendExtraLightButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend ExtraLight" />
+            </Style>
+
+            <Style x:Key="LexendRegular" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Regular" />
+            </Style>
+
+            <Style x:Key="LexendRegularTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Regular" />
+            </Style>
+
+            <Style x:Key="LexendRegularButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Regular" />
+            </Style>
+
+            <Style x:Key="LexendThin" TargetType="{x:Type Label}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Thin" />
+            </Style>
+
+            <Style x:Key="LexendThinTextBox" TargetType="{x:Type TextBox}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Thin" />
+            </Style>
+
+            <Style x:Key="LexendThinButton" TargetType="{x:Type Button}">
+                <Setter Property="FontFamily" Value="pack://application:,,,/fonts/#Lexend Thin" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

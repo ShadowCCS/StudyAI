@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="APIKEY.txt" />
+    <None Remove="Fonts\Lexend-Black.ttf" />
+    <None Remove="Fonts\Lexend-Bold.ttf" />
+    <None Remove="Fonts\Lexend-ExtraBold.ttf" />
+    <None Remove="Fonts\Lexend-ExtraLight.ttf" />
+    <None Remove="Fonts\Lexend-Light.ttf" />
+    <None Remove="Fonts\Lexend-Medium.ttf" />
+    <None Remove="Fonts\Lexend-Regular.ttf" />
+    <None Remove="Fonts\Lexend-SemiBold.ttf" />
+    <None Remove="Fonts\Lexend-Thin.ttf" />
+    <None Remove="logo.png" />
+    <None Remove="settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+    <PackageReference Include="Google.Cloud.AIPlatform.V1" Version="3.6.0" />
+    <PackageReference Include="Google_GenerativeAI" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="APIKEY.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="logo.png" />
+    <Resource Include="settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\Lexend-Black.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-ExtraBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-ExtraLight.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-Light.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-SemiBold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\Lexend-Thin.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>
